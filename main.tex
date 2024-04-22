@@ -90,19 +90,19 @@ Date: \today
 
 
 \section{Motivation}
-In the rapidly evolving landscape of technological innovation and entrepreneurship, the capacity to predict and foster start-up success is crucial not only for individual companies but also for investors. With almost five million new start-ups were created in 2022 alone, the relationships between investors and start-ups grow ever more complex. Investors naturally create a web of relationships that can significantly impact a startup’s access to resources, market entry, and competitive positioning.
+In the rapidly evolving landscape of technological innovation and entrepreneurship, the capacity to predict and foster start-up success is crucial not only for individual companies but also for investors. With almost five million new start-ups were created in 2022 alone based on Embroker Analysis \cite{embroker2024a}, the relationships between investors and start-ups grow ever more complex. They naturally create a web of relationships that can significantly impact a startup’s access to resources, market entry, and competitive positioning. Therefore, according to Bonaventura et al., the position of a start-up within its ecosystem is relevant for its future success \cite{bonaventura2020a}
 
 This research will delve into the application of network science to untangle this complexity by building and analyzing a bipartite network that includes both investors and start-ups (will later be referred as investor network in this proposal). Particularly, the methodologies of centrality analysis and community detection will serve to illuminate the patterns of interaction that are most conducive to successful innovation ecosystems. By representing both investors and start-ups as nodes and their financial engagements as links, this study will provide a structural and dynamic view of the investment landscape.
 
 The scope of this project encompasses the construction of this network, the application of analytical methodologies to discern key patterns, and the prediction of future growth trajectories and success rates of start-ups based on their network positions. This approach will refine the strategies employed by venture capitalists and entrepreneurs alike, offering them a more nuanced tool for decision-making than currently available methods, such as unsupervised learning or financial metrics analytics.
 
 \subsection{Problem Statement}
-Despite the critical role of investor in the startup ecosystem and abundant data on investment amounts and funding rounds, there remains a significant gap in understanding how the specific structures and characteristics of this investor networks influence startup outcomes. Most current models focus predominantly on unsupervised learning and financial metrics analytics, overlooking the broader network characteristics that can significantly influence startup success. This gap presents a critical area for exploration, particularly given the lack of a more nuanced, predictive framework that incorporates the intricate web of relationships and interactions within the start-up investment landscape. Additionally, this research will also enrich data-driven decision-making in venture capital.
+Despite the critical role of investor in the startup ecosystem and abundant data on investment amounts and funding rounds, there remains a significant gap in understanding how the specific structures and characteristics of this investor networks influence startup outcomes. Most current models focus predominantly on utilization of machine learning \cite{krishna2016a} \cite{carniel2023a} \cite{sharchilev2018a} \cite{yang2020a}, overlooking the broader network characteristics that can significantly influence startup success and lacking explainability. This gap presents a critical area for exploration, particularly given the lack of a more nuanced, predictive framework that incorporates the intricate web of relationships and interactions within the start-up investment landscape. Additionally, this research will also enrich data-driven decision-making in venture capital.
 
 This research will aim to answer the question: How do the connectivity and characteristics of investor networks affect the growth trajectories and success of startups? By limiting the investigation to these network characteristics, the research will try to provide a more nuanced understanding of how investor relationships within these networks directly correlate with startup growth and sustainability, thereby offering a foundational tool for strategic decision-making in the investment community.
 
 \subsection{Research Hypothesis and Objectives}
-This research will investigate the hypothesis that the connectivity and characteristics of investor networks, specifically the centrality measures of investors and the structure of investment communities, significantly influence the growth trajectories and success of startups. We hypothesize that startups linked to highly central investors within cohesive investment communities will likely to demonstrate higher growth rates and chance of success. This will align with the theory that the position of a start-up within its ecosystem is relevant for its future success, as the relationships within the ecosystem itself dictate access to resources, knowledge, and opportunities.
+This research will investigate the hypothesis that the connectivity and characteristics of investor networks, specifically the centrality measures of investors and the structure of investment communities, significantly influence the growth trajectories and success of startups. We hypothesize that startups linked to highly central investors within cohesive investment communities will likely to demonstrate higher growth rates and chance of success. This will align with the previously mentioned theory that the position of a start-up within its ecosystem is relevant for its future success, as the relationships within the ecosystem itself dictate access to resources, knowledge, and opportunities \cite{bonaventura2020a}.
 
 There are four objectives in this research. 
 \begin{itemize}
@@ -116,9 +116,9 @@ This research will not explore the qualitative aspects of investor-startup relat
 
 \subsection{Timeliness and Novelty}
 
-The proposed research is exceptionally timely given the current global economic landscape, characterized by rapid technological advancements and an increasingly competitive startup ecosystem. Venture capital firms and entrepreneurs are in constant search of innovative tools that provide a competitive edge in identifying and nurturing potential successful ventures. As the volume of data from digital interactions and transactions continues to grow exponentially, the opportunity to leverage this data through network science for predictive analytics is more pertinent than ever.
+The proposed research is exceptionally timely given the current global economic landscape, characterized by rapid technological advancements and an increasingly competitive startup ecosystem. Venture capital firms and entrepreneurs are in constant search of innovative tools that provide a competitive edge in identifying and nurturing potential successful ventures. As the total venture capital funding reached a decade-high of 200 billion dollar in 2022 \cite{embroker2024a} with only half of the invested companies survive until their fifth year \cite{kotashev2024a}, the opportunity to leverage this data through network science for predictive analytics is more pertinent than ever.
 
-The novelty of this research is highlighted by its innovative approach to constructing a bipartite network analysis that integrates both investors and startups, specifically aimed at predicting venture capital success and startup growth. This is a significant departure from existing research, which predominantly focuses on networks based on other relationships like employee-startups rather than direct investor-startup interactions. Moreover, even in instances where investor networks are considered, the methodologies employed typically revolve around unsupervised learning techniques or analyses based on traditional financial metrics. By shifting the focus to a bipartite network and applying network science methodologies like centrality analysis and community detection, this research will offer a new perspective and toolkit for understanding and leveraging the dynamics of investor influence on startup success, filling a crucial gap in current academic and practical approaches to predict startup growth and success.
+The novelty of this research is highlighted by its innovative approach to constructing a bipartite network analysis that integrates both investors and startups, specifically aimed at predicting venture capital success and startup growth. This is a significant departure from existing research, which predominantly focuses on machine learning techniques \cite{krishna2016a} \cite{sharchilev2018a}, hybrid network science and machine learning techniques \cite{carniel2023a} \cite{yang2020a}, agent based modelling \cite{lengyel2020a}, and qualitative analysis \cite{mccarthy2023a}. Moreover, even in instances where non-hybrid network science is considered, the created network typically revolve around other characteristics such as employee \cite{bonaventura2020a}. By shifting the focus to a bipartite network and applying network science methodologies like centrality analysis and community detection, this research will offer a new perspective and toolkit for understanding and leveraging the dynamics of investor influence on startup success, filling a crucial gap in current academic and practical approaches to predict startup growth and success.
 
 \subsection{Significance}
 
@@ -145,29 +145,26 @@ This research is poised to benefit a wide range of stakeholders, particularly re
 
 \section{Background and Related Work (WIP)}
 
-Demonstrate a knowledge and understanding of past and current work in the subject area, including relevant references like this \cite{template}.
-
 The only paper that are available about the topic is this one. https://www.nature.com/articles/s41598-019-57209-w
 
 
-\section{Programme and Methodology (WIP)}
+\section{Programme and Methodology}
+The proposed research will employ a bipartite network analysis to examine the relationships between investors and startups. This methodology is chosen due to its ability to reflect the complex and dual-role dynamics within the startup ecosystem—investors not only provide capital but also bring knowledge and networks that are crucial for startup success. The research will involve constructing a network where nodes represent investors and startups, and edges represent investment relationships. This approach is similar with Bonaventura et al. \cite{bonaventura2020a} and Carniel et al. researches \cite{carniel2023a}.
 
-\begin{itemize}
-    \item Detail the methodology to be used in pursuit of the research and justify this choice.
-    \item Describe your contributions and novelty and where you
-    will go beyond the state-of-the-art (new methods, new tools,
-    new data, new insights, new proofs,...)
-    \item Describe the programme of work, indicating the research to be undertaken and the milestones that can be used to measure its progress.
-    \item Where suitable define work packages and define the dependences
-    between these work packages. WPs and their dependences should be
-    shown in the Gantt chart in the research plan.
-    \item Explain how the project will be managed.
-    \item State the limitations of your research.
-\end{itemize}
+This research will focus on centrality analysis to identify key actors within the network whose influence and connectivity predict greater success rates for startups. We will also use community detection to uncover clusters within the network that represent closely knit investment circles, which may facilitate knowledge and resource sharing. Temporal analysis will also be used to observe how network structures evolve over time and how these changes influence startup outcomes. Each of these techniques will contribute to understanding different facets of the network's influence on startup success, providing a comprehensive toolkit for analysis that surpasses traditional financial metrics or employee-focused network analyses.
 
-\subsection{Risk Assessment (WIP)}
+This research will extend beyond the current state of the art by integrating investor-startup dynamics explicitly in the network model and employing a combination of network science methodologies that have not been collectively applied to this particular domain. This will provide a new horizon of analysis on startup's growth and success.
 
-\subsection{Ethics (WIP)}
+This research will be managed using a combination of weekly meetings with supervisor to ensure the research objectives are met and can be completed in timely manner. Research progress will also be tracked using project management software to ensure timely delivery of each work package.
+
+While this approach is innovative, it does have several limitations.
+The model’s predictive power might be constrained by unforeseen economic or market factors that are not captured by network dynamics. The model will also only approach the prediction from one lens of analysis only, which is investor and startup interactions and dynamics. By acknowledging and addressing these limitations, the project will strive to provide robust insights while clarifying the scope and applicability of its findings.
+
+\subsection{Risk Assessment}
+There are a few risks involved in this projects. First is the availability and quality of necessary data. As we heavily rely on investor and startups data in Crunchbase, there are risks that the fetched data is incomplete or limited. This can be mitigated by subscribing to Crunchbase's Academic Research Access Program, as we gain access to more complete and updated data inside Crunchbase's database. Second is imbalance and biased data, such as overrepresentation of certain types of investors or startups. To mitigate this risk, we will implement rigorous data cleaning processes to identify and make a conscious effort to include data from underrepresented groups within the startup ecosystem. This might mean focusing on startups led by underrepresented founders or investors from less dominant geographies to ensure a balanced view in the network analysis. Last risk is the amount of data to be processed. As we only have very limited time to conduct the research, we will be exposed to inability to finish the research on time. To mitigate this risk, we will do preprocessing to filter out incomplete data and reduce the data by certain factors that match our computing ability while maintaining the original data proportion.
+
+\subsection{Ethics}
+As predicting startup success is a widely researched field which often use publicly available data, it is hard to envisage any ethical concerns with this project. We can confirm that Crunchbase's data is aggregated and distributed legally and in line with data protection laws. Additionally, while it is still possible that the result of this research can sharpen the existing bias in investor and startup industries toward under-represented group \cite{ewens2020a} \cite{cumming2007a}, our methodology includes robust measures to identify and mitigate such tendency thus promoting the behavior to shift away from such biases.
 
 
 \section{Evaluation}
