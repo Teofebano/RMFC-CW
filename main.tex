@@ -90,11 +90,11 @@ Date: \today
 
 
 \section{Motivation}
-In the rapidly evolving landscape of technological innovation and entrepreneurship, the capacity to predict and foster start-up success is crucial not only for individual companies but also for investors. With almost five million new start-ups were created in 2022 alone based on Embroker Analysis \cite{embroker2024a}, the relationships between investors and start-ups grow ever more complex. They naturally create a web of relationships that can significantly impact a startup’s access to resources, market entry, and competitive positioning. Therefore, according to Bonaventura et al., the position of a start-up within its ecosystem is relevant for its future success \cite{bonaventura2020a}
+In the rapidly evolving landscape of technological innovation and entrepreneurship, the capacity to predict and foster start-up success is crucial not only for individual companies but also for investors. With almost five million new start-ups were created in 2022 alone based on Embroker Analysis \cite{embroker2024a}, the relationships between investors and start-ups grow ever more complex. They naturally create a web of relationships that can significantly impact a startup’s access to resources, market entry, and competitive positioning. Therefore, according to Bonaventura et al., the position of a start-up within its ecosystem is relevant for its future success \cite{uzzi2021a}
 
 This research will delve into the application of network science to untangle this complexity by building and analyzing a bipartite network that includes both investors and start-ups (will later be referred as investor network in this proposal). Particularly, the methodologies of centrality analysis and community detection will serve to illuminate the patterns of interaction that are most conducive to successful innovation ecosystems. By representing both investors and start-ups as nodes and their financial engagements as links, this study will provide a structural and dynamic view of the investment landscape.
 
-The scope of this project encompasses the construction of this network, the application of analytical methodologies to discern key patterns, and the prediction of future growth trajectories and success rates of start-ups based on their network positions. This approach will refine the strategies employed by venture capitalists and entrepreneurs alike, offering them a more nuanced tool for decision-making than currently available methods, such as unsupervised learning or financial metrics analytics.
+The scope of this research encompasses the construction of this network, the application of analytical methodologies to discern key patterns, and the prediction of future growth trajectories and success rates of start-ups based on their network positions. This approach will refine the strategies employed by venture capitalists and entrepreneurs alike, offering them a more nuanced tool for decision-making than currently available methods, such as unsupervised learning or financial metrics analytics.
 
 \subsection{Problem Statement}
 Despite the critical role of investor in the startup ecosystem and abundant data on investment amounts and funding rounds, there remains a significant gap in understanding how the specific structures and characteristics of this investor networks influence startup outcomes. Most current models focus predominantly on utilization of machine learning \cite{krishna2016a} \cite{carniel2023a} \cite{sharchilev2018a} \cite{yang2020a}, overlooking the broader network characteristics that can significantly influence startup success and lacking explainability. This gap presents a critical area for exploration, particularly given the lack of a more nuanced, predictive framework that incorporates the intricate web of relationships and interactions within the start-up investment landscape. Additionally, this research will also enrich data-driven decision-making in venture capital.
@@ -134,10 +134,10 @@ To ensure the study's feasibility before proceeding with major implementation wo
 \begin{itemize}
     \item Initial tests will be run on the Crunchbase API to confirm the availability and integrity of the data required for the study, particularly regarding investor-startup relationships and investment details. This will help identify any potential data gaps or limitations in the API's scope
     \item An evaluation of the computational resources needed to process and analyze the data will be undertaken. This includes assessing the software and hardware requirements for handling large datasets and complex network analyses, ensuring that the necessary tools and capacities are in place
-    \item A detailed timeline will be developed, outlining key milestones and deliverables. This will ensure that the project remains on track and within the allocated time, addressing potential bottlenecks or delays early in the process
+    \item A detailed timeline will be developed, outlining key milestones and deliverables. This will ensure that the research remains on track and within the allocated time, addressing potential bottlenecks or delays early in the process
 \end{itemize}
 
-By addressing these key aspects, we can minimize risks and ensuring that the study can be conducted effectively within its constraints. This preparatory phase is critical to guarantee that the full research project is practical, achievable, and capable of producing valuable insights within the limited timeframe and resources available.
+By addressing these key aspects, we can minimize risks and ensuring that the study can be conducted effectively within its constraints. This preparatory phase is critical to guarantee that the full research is practical, achievable, and capable of producing valuable insights within the limited timeframe and resources available.
 
 \subsection{Beneficiaries}
 
@@ -158,13 +158,13 @@ This research will extend beyond the current state of the art by integrating inv
 This research will be managed using a combination of weekly meetings with supervisor to ensure the research objectives are met and can be completed in timely manner. Research progress will also be tracked using project management software to ensure timely delivery of each work package.
 
 While this approach is innovative, it does have several limitations.
-The model’s predictive power might be constrained by unforeseen economic or market factors that are not captured by network dynamics. The model will also only approach the prediction from one lens of analysis only, which is investor and startup interactions and dynamics. By acknowledging and addressing these limitations, the project will strive to provide robust insights while clarifying the scope and applicability of its findings.
+The model’s predictive power might be constrained by unforeseen economic or market factors that are not captured by network dynamics. The model will also only approach the prediction from one lens of analysis only, which is investor and startup interactions and dynamics. By acknowledging and addressing these limitations, the research will strive to provide robust insights while clarifying the scope and applicability of its findings.
 
 \subsection{Risk Assessment}
-There are a few risks involved in this projects. First is the availability and quality of necessary data. As we heavily rely on investor and startups data in Crunchbase, there are risks that the fetched data is incomplete or limited. This can be mitigated by subscribing to Crunchbase's Academic Research Access Program, as we gain access to more complete and updated data inside Crunchbase's database. Second is imbalance and biased data, such as overrepresentation of certain types of investors or startups. To mitigate this risk, we will implement rigorous data cleaning processes to identify and make a conscious effort to include data from underrepresented groups within the startup ecosystem. This might mean focusing on startups led by underrepresented founders or investors from less dominant geographies to ensure a balanced view in the network analysis. Last risk is the amount of data to be processed. As we only have very limited time to conduct the research, we will be exposed to inability to finish the research on time. To mitigate this risk, we will do preprocessing to filter out incomplete data and reduce the data by certain factors that match our computing ability while maintaining the original data proportion.
+There are a few risks involved in this research. First is the availability and quality of necessary data. As we heavily rely on investor and startups data in Crunchbase, there are risks that the fetched data is incomplete or limited. This can be mitigated by subscribing to Crunchbase's Academic Research Access Program, as we gain access to more complete and updated data inside Crunchbase's database. Second is imbalance and biased data, such as overrepresentation of certain types of investors or startups. To mitigate this risk, we will implement rigorous data cleaning processes to identify and make a conscious effort to include data from underrepresented groups within the startup ecosystem. This might mean focusing on startups led by underrepresented founders or investors from less dominant geographies to ensure a balanced view in the network analysis. Last risk is the amount of data to be processed. As we only have very limited time to conduct the research, we will be exposed to inability to finish the research on time. To mitigate this risk, we will do preprocessing to filter out incomplete data and reduce the data by certain factors that match our computing ability while maintaining the original data proportion.
 
 \subsection{Ethics}
-As predicting startup success is a widely researched field which often use publicly available data, it is hard to envisage any ethical concerns with this project. We can confirm that Crunchbase's data is aggregated and distributed legally and in line with data protection laws. Additionally, while it is still possible that the result of this research can sharpen the existing bias in investor and startup industries toward under-represented group \cite{ewens2020a} \cite{cumming2007a}, our methodology includes robust measures to identify and mitigate such tendency thus promoting the behavior to shift away from such biases.
+As predicting startup success is a widely researched field which often use publicly available data, it is hard to envisage any ethical concerns with this research. We can confirm that Crunchbase's data is aggregated and distributed legally and in line with data protection laws. Additionally, while it is still possible that the result of this research can sharpen the existing bias in investor and startup industries toward under-represented group \cite{ewens2020a} \cite{cumming2007a}, our methodology includes robust measures to identify and mitigate such tendency thus promoting the behavior to shift away from such biases.
 
 
 \section{Evaluation}
@@ -184,22 +184,16 @@ Generally, it will follow these five steps :
     \item Using the collected data, we will construct a network where nodes represent startups and investors, and edges represent investment relationships. The network will be analyzed over time to capture the dynamics of investor influence and startup development
     \item Calculate centrality measures for each startup in the network. This analysis will identify startups that, at an early stage, are centrally positioned within the investor network, hypothesizing that these startups are more likely to succeed
     \item Apply algorithms to detect communities within the network, assuming that startups within highly interconnected investor communities may have better access to resources and knowledge, contributing to their success
-    \item Analyze startups' success based on whether, within a 7-year window from founding, startups achieve significant milestones such as acquiring other firms, being acquired, or completing an IPO
+    \item Analyze startups' success based on whether, within a 7-year window from founding, startups achieve significant milestones such as acquiring other firms, being acquired, or completing an IPO. This is similar as Bonaventura et al. approach \cite{bonaventura2020a}
     \item Compare the early predictions based on network centrality and community detection with actual outcomes to evaluate the accuracy and predictive power of these network metrics
 \end{itemize}
 
-\section{Expected Outcomes (WIP)}
+\section{Expected Outcomes}
+We expect that this research will produce similar result as Bonaventura et al. research \cite{bonaventura2020a}. While Bonaventura et al. focus on the knowledge transfer between startups as they key to startup's growth and success represented by employee movement, our research will show the similar knowledge transfer represented by investors network. We anticipate that by analyzing network centrality and community affiliations within this network, they can be robust predictors of startup growth and success and adding new dimension of data-driven decision making for startup investment on venture capital firms. Therefore, the result of this research will also prove Uzzi's theory about how social relations and networks benefit firms on navigating through challenges and striving \cite{uzzi2021a}.
 
-Conclude your research proposal by addressing your predicted outcomes. What are you hoping to prove/disprove? Indicate how you envisage your research will contribute to debates and discussions in your particular subject area:
+\section{Research Plan, Milestones and Deliverables}
 
-\begin{itemize}
-    \item How will your research make an original contribution to knowledge?
-    \item How might it fill gaps in existing work? 
-    \item How might it extend understanding of particular topics?
-\end{itemize}
-
-
-\section{Research Plan, Milestones and Deliverables (WIP)}
+We propose to divide this research into three major stages. The first stage will be Crunchbase's API exploration to familiarize with Crunchbase's data and limitation. In this stage, we will also fetch the data and store it in our development environment. The next stage will be the development of the investor network, including all pre-process and data cleaning. The last stage will be the centrality and community detection analysis to prove the aforementioned theory's by Uzzi \cite{uzzi2021a} using similar parameter of startup's growth and success by Bonaventura et al. approach \cite{bonaventura2020a}. The detailed proposed timeline can be seen in figure 1, while the milestones and deliverables are accessible in table 1 and 2. The current update for this research is, we are currently in the first stage already and expect to finish stage 1 by beginning of June. We will proceed to further stages as this research proposal the get accepted on early June onward.
 
 \definecolor{barblue}{RGB}{153,204,254}
 \definecolor{groupblue}{RGB}{51,102,254}
@@ -226,29 +220,29 @@ Conclude your research proposal by addressing your predicted outcomes. What are 
     group height=.3,
     group peaks height=.2,
     bar incomplete/.append style={fill=green}
-   ]{2018-06-01}{2018-08-16}
+   ]{2024-06-01}{2024-08-16}
    \gantttitlecalendar{month=name}\\
    \ganttbar[
-    progress=100,
+    progress=30,
     bar progress label font=\small\color{barblue},
     bar progress label node/.append style={right=4pt},
     bar label font=\normalsize\color{barblue},
     name=pp
-   ]{Background Reading}{2018-06-01}{2018-06-14} \\
+   ]{API  exploration}{2024-06-01}{2024-06-07} \\
 \ganttset{progress label text={}, link/.style={black, -to}}
-\ganttgroup{Work Package 1}{2018-06-14}{2018-06-30} \\
-\ganttbar[progress=4, name=T1A]{Task A}{2018-06-14}{2018-06-21} \\
-\ganttlinkedbar[progress=0]{Task B}{2018-06-21}{2018-06-30} \\
-\ganttgroup{Work Package 2}{2018-07-01}{2018-07-14} \\
-\ganttbar[progress=15, name=T2A]{Task A}{2018-07-01}{2018-07-07} \\
-\ganttlinkedbar[progress=0]{Task B}{2018-07-07}{2018-07-14} \\
-\ganttgroup{Dissertation}{2018-07-14}{2018-08-16} \\
-  \ganttbar[progress=0]{Task A}{2018-07-14}{2018-08-16}
+\ganttgroup{Network Dev}{2024-06-07}{2024-06-28} \\
+\ganttbar[progress=0, name=T1A]{Data Preprocess}{2024-06-07}{2024-06-21} \\
+\ganttlinkedbar[progress=0]{Network Creation}{2024-06-21}{2024-06-28} \\
+\ganttgroup{Network Analysis}{2024-06-28}{2024-07-21} \\
+\ganttbar[progress=0, name=T2A]{Centrality Analysis}{2024-06-28}{2024-07-07} \\
+\ganttlinkedbar[progress=0]{Community Analysis}{2024-07-08}{2024-07-21} \\
+\ganttgroup{Dissertation}{2024-07-14}{2024-08-16} \\
+  \ganttbar[progress=0]{Write up}{2024-07-14}{2024-08-16}
   \ganttset{link/.style={green}}
   \ganttlink[link mid=.4]{pp}{T1A}
   \ganttlink[link mid=.159]{pp}{T2A}
 \end{ganttchart}
-\caption{Gantt Chart of the activities defined for this project.}
+\caption{Gantt Chart of the activities defined for this research.}
 \label{fig:gantt}
 \end{figure}
 
@@ -258,14 +252,15 @@ Conclude your research proposal by addressing your predicted outcomes. What are 
         \hline
         \textbf{Milestone} & \textbf{Week} & \textbf{Description} \\
         \hline
-        $M_1$ & 2 & Feasibility study completed \\
-        $M_2$ & 5 & First prototype implementation completed \\
-        $M_3$ & 7 & Evaluation completed \\
+        $M_1$ & 1 & Feasibility study completed and data needed is fetched \\
+        $M_2$ & 3 & Data is clean, complete, and scaled down \\
+        $M_3$ & 4 & First prototype of network implementation completed \\
+        $M_3$ & 7 & Evaluation completed for both centrality and community detection \\
         $M_4$ & 10 & Submission of dissertation \\
         \hline
         \end{tabular} 
     \end{center}
-    \caption{Milestones defined in this project.}
+    \caption{Milestones defined in this research.}
     \label{fig:milestones}
 \end{table}
 
@@ -275,13 +270,13 @@ Conclude your research proposal by addressing your predicted outcomes. What are 
         \hline
         \textbf{Deliverable} & \textbf{Week} & \textbf{Description} \\
         \hline
-        $D_1$ & 6 & Software tool for \dots\\
-        $D_2$ & 8 & Evaluation report on \dots\\
+        $D_1$ & 7 & Implementation of investor network \\
+        $D_2$ & 8 & Evaluation report on the network \\
         $D_3$ & 10 & Dissertation \\
         \hline
         \end{tabular} 
     \end{center}
-    \caption{List of deliverables defined in this project.}
+    \caption{List of deliverables defined in this research.}
     \label{fig:deliverables}
 \end{table}
 
