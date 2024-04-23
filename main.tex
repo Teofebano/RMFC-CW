@@ -15,6 +15,7 @@
 \usepackage{pgfgantt}
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
+\usepackage{subcaption}
 
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH] \THEYEAR}
@@ -128,7 +129,7 @@ The immediate applications of this research are substantial. For venture capital
 
 \subsection{Feasibility}
 
-The feasibility of this research will be grounded in the practicality of its methodology and the accessibility of its primary data source, the Crunchbase API, which provides a comprehensive and continuously updated dataset of startups, investors, and investment transactions. This data richness and availability significantly enhance the feasibility of conducting extensive network analyses within a constrained timeframe and with limited resources.
+The feasibility of this research will be grounded in the practicality of its methodology and the accessibility of its primary data source, the Crunchbase Application Programming Interface (API), which provides a comprehensive and continuously updated dataset of startups, investors, and investment transactions. This data richness and availability significantly enhance the feasibility of conducting extensive network analyses within a constrained timeframe and with limited resources.
 
 To ensure the study's feasibility before proceeding with major implementation work, a preliminary feasibility study will be conducted. This will involve:
 \begin{itemize}
@@ -146,18 +147,48 @@ This research is poised to benefit a wide range of stakeholders, particularly re
 \section{Background and Related Work}
 
 This section provides the definitions for the most important concept used in the proposed research. There are several key concepts in our research, which include:
-\begin{itemize}
-    \item Bipartite Network: A type of graph in network science where nodes are divided into two disjoint sets, and edges can only connect nodes from different sets \cite{guillaume2005a}. In this study, one set represents startups and the other represents investors, with edges signifying investment relationships.
-    \item Centrality Analysis: A method used to identify the most influential nodes within a network based on their position \cite{rodrigues2019a}. In this proposed research, this involves quantifying how central a startup or investor is within the bipartite network, which is crucial for understanding their potential impact on the network’s dynamics and outcomes. We will use both degree centrality and closeness centrality to do the analysis. Degree centrality is the simplest form of centrality and measures the number of direct connections a node has. In our network, it can help identify investors who are heavily investing across various startups or startups that are attracting numerous investors. On the other hand closeness centrality reflects how close a node is to all other nodes in the network, providing insights into how quickly information from the node can spread throughout the network. Investors with high closeness centrality can affect the startup ecosystem more rapidly than others.
-    \item Community Detection : A method to help in identifying groups of nodes that are more densely connected to each other than to the rest of the network \cite{rodrigues2019a}. In this proposed research, we will use Louvain algorithm and Label Propagation Algorithm (LPA). Louvain is chosen as it is a popular method for detecting communities in large networks based on modularity optimization, while LPA is relatively fast and scalable and able to gain the insights early. They both can efficiently reveal the high-level compartmentalization of the network, showing how investor-startup clusters form.
-\end{itemize}
+
+\textbf{Bipartite Network}: A type of graph in network science where nodes are divided into two disjoint sets, and edges can only connect nodes from different sets \cite{guillaume2005a}. In this study, one set represents startups and the other represents investors, with edges signifying investment relationships. The example of Bipartite Network can be seen in Figure 1 below.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.25\textwidth]{bipartite.png}
+\caption{Bipartite Network}
+\end{figure}
+
+\textbf{Centrality Analysis}: A method used to identify the most influential nodes within a network based on their position \cite{rodrigues2019a}. In this proposed research, this involves quantifying how central a startup or investor is within the bipartite network, which is crucial for understanding their potential impact on the network’s dynamics and outcomes. We will use both degree centrality and closeness centrality to do the analysis. Degree centrality is the simplest form of centrality and measures the number of direct connections a node has. In our network, it can help identify investors who are heavily investing across various startups or startups that are attracting numerous investors. On the other hand closeness centrality reflects how close a node is to all other nodes in the network, providing insights into how quickly information from the node can spread throughout the network. Investors with high closeness centrality can affect the startup ecosystem more rapidly than others. To better understand the definition of these two types of centrality, please take a look into Figure 2 below.
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{Degree.png}
+    \caption{Degree Centrality}
+    \label{fig:image1}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{Closeness.png}
+    \caption{Closeness Centrality}
+    \label{fig:image2}
+\end{subfigure}
+\caption{Centrality}
+\label{fig:doubleimage}
+\end{figure}
+
+\textbf{Community Detection} : A method to help in identifying groups of nodes that are more densely connected to each other than to the rest of the network \cite{rodrigues2019a}. In this proposed research, we will use Louvain algorithm and Label Propagation Algorithm (LPA). Louvain is chosen as it is a popular method for detecting communities in large networks based on modularity optimization, while LPA is relatively fast and scalable and able to gain the insights early. They both can efficiently reveal the high-level compartmentalization of the network, showing how investor-startup clusters form. To better visualize community detection, please take a look into Figure 3 below.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{community.png}
+\caption{Community Detection}
+\end{figure}
 
 This research builds upon existing methodologies in startup success prediction, which have predominantly utilized machine learning techniques \cite{krishna2016a} \cite{sharchilev2018a}, hybrid network science and machine learning techniques \cite{carniel2023a} \cite{yang2020a}, agent-based modeling simulating market scenarios \cite{lengyel2020a}, and qualitative analysis based on case studies \cite{mccarthy2023a}. These approaches, while insightful, often overlook the distinct roles within networks, such as the specific dynamics between investors and startups, and generally lack the empirical grounding in actual investment data that our proposed bipartite network analysis provides.
 
-This research proposal marks a significant departure from these existing approaches by focusing solely on the bipartite network analysis of investors and startups. Unlike previous works, which often revolve around characteristics like employee roles and interactions within companies, our approach emphasizes the dynamics between investors and startups. This shift allows us to explore how investment patterns influence startup success, which is less examined in current literature. By analyzing how centrality within this investor-startup network correlates with outcomes, this research aims to unveil nuanced insights that have been underexplored in traditional studies, potentially leading to more targeted and effective investment strategies in the startup ecosystem.
+This research proposal marks a significant departure from these existing approaches by focusing solely on the bipartite network analysis of investors and startups. Unlike previous works, which often revolve around characteristics like employee roles and interactions within companies, our approach emphasizes the dynamics between investors and startups. This shift allows us to explore how investment patterns influence startup success, which is less examined in current literature. By analyzing how centrality within this investor-startup network correlates with outcomes, this research aims to unveil nuanced insights that have been under explored in traditional studies, potentially leading to more targeted and effective investment strategies in the startup ecosystem.
 
 \section{Programme and Methodology}
-The proposed research will employ a bipartite network analysis to examine the relationships between investors and startups. This methodology is chosen due to its ability to reflect the complex and dual-role dynamics within the startup ecosystem—investors not only provide capital but also bring knowledge and networks that are crucial for startup success. The research will involve constructing a network where nodes represent investors and startups, and edges represent investment relationships. This approach is similar with Bonaventura et al. \cite{bonaventura2020a} and Carniel et al. researches \cite{carniel2023a}.
+The proposed research will employ a bipartite network analysis to examine the relationships between investors and startups. This methodology is chosen due to its ability to reflect the complex and dual-role dynamics within the startup ecosystem—investors not only provide capital but also bring knowledge and networks that are crucial for startup success. The research will involve constructing a network where nodes represent investors and startups, and edges represent investment relationships. This approach is similar with employee and startups network created by Bonaventura et al. \cite{bonaventura2020a} and investor and startups network created by Carniel et al. researches \cite{carniel2023a}.
 
 This research will focus on centrality analysis to identify key actors within the network whose influence and connectivity predict greater success rates for startups. We will also use community detection to uncover clusters within the network that represent closely knit investment circles, which may facilitate knowledge and resource sharing. Temporal analysis will also be used to observe how network structures evolve over time and how these changes influence startup outcomes. Each of these techniques will contribute to understanding different facets of the network's influence on startup success, providing a comprehensive toolkit for analysis that surpasses traditional financial metrics or employee-focused network analyses.
 
@@ -169,7 +200,7 @@ While this approach is innovative, it does have several limitations.
 The model’s predictive power might be constrained by unforeseen economic or market factors that are not captured by network dynamics. The model will also only approach the prediction from one lens of analysis only, which is investor and startup interactions and dynamics. By acknowledging and addressing these limitations, the research will strive to provide robust insights while clarifying the scope and applicability of its findings.
 
 \subsection{Risk Assessment}
-There are a few risks involved in this research. First is the availability and quality of necessary data. As we heavily rely on investor and startups data in Crunchbase, there are risks that the fetched data is incomplete or limited. This can be mitigated by subscribing to Crunchbase's Academic Research Access Program, as we gain access to more complete and updated data inside Crunchbase's database. Second is imbalance and biased data, such as overrepresentation of certain types of investors or startups. To mitigate this risk, we will implement rigorous data cleaning processes to identify and make a conscious effort to include data from underrepresented groups within the startup ecosystem. This might mean focusing on startups led by underrepresented founders or investors from less dominant geographies to ensure a balanced view in the network analysis. Last risk is the amount of data to be processed. As we only have very limited time to conduct the research, we will be exposed to inability to finish the research on time. To mitigate this risk, we will do preprocessing to filter out incomplete data and reduce the data by certain factors that match our computing ability while maintaining the original data proportion.
+There are a few risks involved in this research. First is the availability and quality of necessary data. As we heavily rely on investor and startups data in Crunchbase, there are risks that the fetched data is incomplete or limited. This can be mitigated by subscribing to Crunchbase's Academic Research Access Program, as we gain access to more complete and updated data inside Crunchbase's database. Second is imbalance and biased data, such as over representation of certain types of investors or startups. To mitigate this risk, we will implement rigorous data cleaning processes to identify and make a conscious effort to include data from underrepresented groups within the startup ecosystem. This might mean focusing on startups led by underrepresented founders or investors from less dominant geographies to ensure a balanced view in the network analysis. Last risk is the amount of data to be processed. As we only have very limited time to conduct the research, we will be exposed to inability to finish the research on time. To mitigate this risk, we will do pre-processing to filter out incomplete data and reduce the data by certain factors that match our computing ability while maintaining the original data proportion.
 
 \subsection{Ethics}
 As predicting startup success is a widely researched field which often use publicly available data, it is hard to envisage any ethical concerns with this research. We can confirm that Crunchbase's data is aggregated and distributed legally and in line with data protection laws. Additionally, while it is still possible that the result of this research can sharpen the existing bias in investor and startup industries toward under-represented group \cite{ewens2020a} \cite{cumming2007a}, our methodology includes robust measures to identify and mitigate such tendency thus promoting the behavior to shift away from such biases.
@@ -201,7 +232,7 @@ We expect that this research will produce similar result as Bonaventura et al. r
 
 \section{Research Plan, Milestones and Deliverables}
 
-We propose to divide this research into three major stages. The first stage will be Crunchbase's API exploration to familiarize with Crunchbase's data and limitation. In this stage, we will also fetch the data and store it in our development environment. The next stage will be the development of the investor network, including all pre-process and data cleaning. The last stage will be the centrality and community detection analysis to prove the aforementioned theory's by Uzzi \cite{uzzi2021a} using similar parameter of startup's growth and success by Bonaventura et al. approach \cite{bonaventura2020a}. The detailed proposed timeline can be seen in figure 1, while the milestones and deliverables are accessible in table 1 and 2. The current update for this research is, we are currently in the first stage already and expect to finish stage 1 by beginning of June. We will proceed to further stages as this research proposal the get accepted on early June onward.
+We propose to divide this research into three major stages. The first stage will be Crunchbase's API exploration to familiarize with Crunchbase's data and limitation. In this stage, we will also fetch the data and store it in our development environment. The next stage will be the development of the investor network, including all pre-process and data cleaning. The last stage will be the centrality and community detection analysis to prove the aforementioned theory's by Uzzi \cite{uzzi2021a} using similar parameter of startup's growth and success by Bonaventura et al. approach \cite{bonaventura2020a}. The detailed proposed timeline can be seen in Figure 4, while the milestones and deliverables are accessible in Table 1 and 2. The current update for this research is, we are currently in the first stage already and expect to finish stage 1 by beginning of June 2024. We will proceed to further stages as this research proposal the get accepted on early June onward.
 
 \definecolor{barblue}{RGB}{153,204,254}
 \definecolor{groupblue}{RGB}{51,102,254}
